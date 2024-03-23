@@ -1,0 +1,1 @@
+export { default as SignUp } from './register-view';
