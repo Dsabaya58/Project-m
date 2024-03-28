@@ -95,7 +95,7 @@ const base = {
   error,
   grey,
   common,
-  divider: alpha(grey[500], 0.2),
+  divider: grey[400],
   action,
 };
 
@@ -106,14 +106,14 @@ export function palette() {
     ...base,
     mode: 'light',
     text: {
-      primary: grey[800],
-      secondary: grey[600],
-      disabled: grey[500],
+      primary: '#1f1b17',
+      secondary: '#1f1b17',
+      disabled: '#1f1b17',
     },
     background: {
-      paper: '#FFFFFF',
+      paper: '#f1f1f0',
       default: grey[100],
-      neutral: grey[200],
+      neutral: '#403b37',
     },
     action: {
       ...base.action,

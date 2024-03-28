@@ -15,7 +15,7 @@ const navConfig = [
   {
     title: 'user',
     path: '/user',
-    icon: icon('ic_user'),
+    icon: icon('ic_user'), 
   },
   {
     title: 'product',

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 // import Button from '@mui/material/Button';
@@ -22,7 +22,7 @@ import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export default function SignUp() {
+export default function ChangepasswordPage() {
   const theme = useTheme();
 
   const router = useRouter();
@@ -36,13 +36,39 @@ export default function SignUp() {
   const renderForm = (
     <>
       <Stack spacing={3}>
-        <TextField name="name" label="First name" />
-        <TextField name="name" label="Last name" />
-        <TextField name="email" label="Email address" />
+      <TextField
+          name="password"
+          label="Old Password"
+          type={showPassword ? 'text' : 'password'}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                  <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
 
         <TextField
           name="password"
-          label="Password"
+          label="New Password"
+          type={showPassword ? 'text' : 'password'}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                  <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+
+        <TextField
+          name="password"
+          label="Confirm Password"
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
@@ -56,6 +82,7 @@ export default function SignUp() {
         />
       </Stack> <br />
 
+
       <LoadingButton
         fullWidth
         size="large"
@@ -64,7 +91,7 @@ export default function SignUp() {
         color="inherit"
         onClick={handleClick}
       >
-        SignUp
+        Change Password
       </LoadingButton>
     </>
   );
@@ -95,18 +122,10 @@ export default function SignUp() {
             maxWidth: 420,
           }}
         >
-          <Typography variant="h4">Sign Up to Toursboat</Typography><br />
+          <Typography variant="h4">Change Password</Typography><br />
 
           {renderForm}
 
-          <Typography variant="body2" sx={{ mt: 2, mb: 5 }}>
-            Already have an account?
-            <Link href='login' variant="subtitle2" sx={{ ml: 0.5,  }}>
-              Sign In
-            </Link>
-          </Typography>
-
-          
         </Card>
       </Stack>
     </Box>

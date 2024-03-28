@@ -6,6 +6,8 @@ import Divider from '@mui/material/Divider';
 import Popover from '@mui/material/Popover';
 import { alpha } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';
+// eslint-disable-next-line import/no-extraneous-dependencies
+// import {LogoutIcon} from '@mui/icons-material';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
@@ -15,7 +17,7 @@ import { account } from 'src/_mock/account';
 
 const MENU_OPTIONS = [
   {
-    label: 'Home',
+    label: 'Account Details',
     icon: 'eva:home-fill',
   },
   {
@@ -79,7 +81,7 @@ export default function AccountPopover() {
             p: 0,
             mt: 1,
             ml: 0.75,
-            width: 200,
+            width: 250,
           },
         }}
       >

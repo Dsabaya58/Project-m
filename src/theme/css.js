@@ -11,7 +11,7 @@ export const paper = ({ theme, bgcolor, dropdown }) => ({
     blur: 20,
     opacity: 0.9,
     color: theme.palette.background.paper,
-    ...(!!bgcolor && {
+    ...(!!bgcolor && { 
       color: bgcolor,
     }),
   }),

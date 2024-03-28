@@ -55,7 +55,7 @@ export default function LoginView() {
       </Stack>
 
       <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ my: 3 }}>
-        <Link variant="subtitle2" underline="hover">
+        <Link href='forgotpassword' variant="subtitle2" underline="hover">
           Forgot password?
         </Link>
       </Stack>
@@ -77,7 +77,7 @@ export default function LoginView() {
     <Box
       sx={{
         ...bgGradient({
-          color: alpha(theme.palette.background.default, 0.9),
+          color: alpha(theme.palette.background.paper, 0.9),
           imgUrl: '/assets/background/overlay_4.jpg',
         }),
         height: 1,

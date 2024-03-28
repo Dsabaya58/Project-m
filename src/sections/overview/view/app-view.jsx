@@ -6,13 +6,15 @@ import AppCurrentVisits from '../app-current-visits';
 import AppWebsiteVisits from '../app-website-visits';
 import AppWidgetSummary from '../app-widget-summary';
 
+
+
 // ----------------------------------------------------------------------
 
 export default function AppView() {
   return (
     <Container maxWidth="xl">
       <Typography variant="h4" sx={{ mb: 5 }}>
-        Hi, Welcome back 👋
+        Dashboard
       </Typography>
 
       <Grid container spacing={3}>
@@ -22,6 +24,7 @@ export default function AppView() {
             total={714000}
             color="success"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_bag.png" />}
+             
           />
         </Grid>
 
